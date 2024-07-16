@@ -4,18 +4,16 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 80px 30px;
+  padding: 10vh 5vh;
   z-index: 1;
 
   @media (max-width: 960px) {
-    padding: 66px 16px;
+    padding: 4vh 2vh;
   }
 
   @media (max-width: 640px) {
-    padding: 32px 16px;
+    padding: 3vh 1vh;
   }
-
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 const HeroInnerContainer = styled.div`
   position: relative;
@@ -34,9 +32,8 @@ const HeroLeftContainer = styled.div`
   order: 2;
   @media (max-width: 960px) {
     order: 2;
-    margin-bottom: 30px;
+    margin-bottom: 3vh;
     display: flex;
-    gap: 6px;
     flex-direction: column;
     align-items: center;
   }
@@ -52,7 +49,7 @@ const HeroRightContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-contents: center;
-    margin-bottom: 80px;
+    margin-bottom: 5vh;
   }
 
   @media (max-width: 640px) {
@@ -100,7 +97,7 @@ const Span = styled.div`
 
 const SubTitle = styled.div`
   font-size: 20px;
-  line-height: 32px;
+  line-height: 4vh;
   margin-bottom: 42px;
   color: ${({ theme }) => theme.black_light};
 
@@ -118,12 +115,12 @@ const ResumeButton=styled.a`
     margin:7px;
     background:${({ theme }) => theme.gray_dark};
     color: white;
-    font-size: 3vh;
+    font-size: 1em;
     font-weight: 500;
-    padding: 2vh;
+    padding: 1vh;
     transition: 0.3s;
     border-radius:4vh;
-    width: 90%;
+    width: 50%;
     cursor:pointer;
     &:hover {
         background: ${({ theme }) => theme.gray_dark};
@@ -145,42 +142,27 @@ const Img = styled.img`
   }
 `;
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content-center;
-position: relative;
-z-index: 1;
-align-items: center;
-`;
-const Wrapper = styled.div`
-  position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content-center;
+  z-index: 1;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1100px;
-  gap: 12px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
-`;
-
+  `;
 const SkillsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  display:flex; flex-direction:row;
   margin-top: 20px;
-  gap: 50px;
+  gap: 3vh;
   justify-content: center;
 `;
 const Skill = styled.div`
-  width: 100%;
-  max-width: 500px;
+  width: 80%;
   background:${({ theme }) => theme.primary_light};
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 2vh;
-  padding: 2vh 5vh;
+  padding: 2vh 3vh;
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -194,7 +176,7 @@ const Skill = styled.div`
 `;
 
 const SkillTitle = styled.div`
-  font-size: 28px;
+  font-size: 1.5em;
   font-weight: 600;
   margin-bottom: 20px;
   text-align: center;
@@ -215,7 +197,7 @@ const SkillItem = styled.div`
   color: ${({ theme }) => theme.black};
   border: 1px solid ${({ theme }) => theme.black_light};
   border-radius: 1vh;
-  padding: 12px 16px;
+  padding: 8px 12px;
   margin-top:1vh;
   display: flex;
   align-items: center;
@@ -242,6 +224,6 @@ export {
   SubTitle, Span, 
   TextLoop, Title, 
   HeroLeftContainer, HeroRightContainer,HeroInnerContainer,
-  Container, Wrapper, SkillsContainer, Skill, SkillTitle, 
+  Container, SkillsContainer, Skill, SkillTitle, 
   SkillList, SkillItem, SkillImage
 };

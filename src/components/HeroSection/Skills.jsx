@@ -1,13 +1,12 @@
 import React from "react";
 import { skills } from "../../data/constants";
 import { Tilt } from "react-tilt";
-import {Container, Wrapper, SkillsContainer, Skill, SkillTitle, 
+import {Container, SkillsContainer, Skill, SkillTitle, 
   SkillList, SkillItem, SkillImage} from './styles';
 
 const Skills = () => {
   return (
-    <Container id="Skills">
-      <Wrapper>
+    <Container id="Skills">    
         <SkillsContainer>
           {skills.map((skill, index) => (
               <Skill key={`skill-${index}`}>
@@ -24,8 +23,7 @@ const Skills = () => {
                 </SkillList>
               </Skill>
           ))}
-        </SkillsContainer>
-      </Wrapper>
+        </SkillsContainer>    
     </Container>
   );
 };

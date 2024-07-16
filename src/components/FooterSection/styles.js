@@ -2,7 +2,6 @@ import styled from "styled-components";
 const FooterContainer = styled.div`
 background: ${({ theme }) => theme.bg};
   width: 100%;
-  padding: 1rem 0;
   display: flex;
   justify-content: center;
   position: relative;
@@ -14,9 +13,8 @@ const FooterWrapper = styled.div`
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
   align-items: center;
-  padding: 1rem;
+  padding: 1vh;
   color: ${({ theme }) => theme.white};
 `;
 
@@ -33,14 +31,14 @@ const Nav = styled.nav`
     gap: 1rem;
     justify-content: center;
     text-align: center;
-    font-size: 12px;
+    font-size: 2vh;
   }
 `;
 
 const NavLink = styled.a`
   color:white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1em;
   transition: color 0.2s ease-in-out;
   &:hover {
     color: ${({ theme }) => theme.black};
@@ -50,14 +48,9 @@ const NavLink = styled.a`
   }
 `;
 
-const SocialMediaIcons = styled.div`
-  display: flex;
-  margin-top: 1rem;
-`;
 const SocialMediaIcon = styled.a`
   display: inline-block;
   margin: 0 1rem;
-  font-size: 1.5rem;
   color: ${({ theme }) => theme.black};
   transition: color 0.2s ease-in-out;
   &:hover {
@@ -66,7 +59,8 @@ const SocialMediaIcon = styled.a`
 `;
 
 const Message = styled.p`
-  
+  display:flex; justify-content:space-around;
+  align-items:center;
   font-size: 1em;
   color: ${({ theme }) => theme.black_light};
   text-align: center;
@@ -77,8 +71,9 @@ const Container = styled.div`
   gap: 12px;
   z-index: 1;
   align-items: center;
-  @media (max-width: 960px) {
+  @media (max-width: 1200px) {
     padding: 0px;
+    flex-direction:column;
   }
 `;
 
@@ -89,9 +84,6 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  max-width: 1350px;
-  padding: 0px 0px 80px 0px;
-  gap: 12px;
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -101,22 +93,21 @@ const Title = styled.div`
   font-size: 2em;
   text-align: center;
   font-weight: 600;
-  margin-top: 5vh;
+  margin-top: 3vh;
   color: ${({ theme }) => theme.black_light};
   @media (max-width: 768px) {
-    margin-top: 12px;
-    font-size: 32px;
+    margin-top: 2vh;
+    font-size: 2em;
   }
 `;
 
 const ContactForm = styled.form`
-  width: 95%;
-  max-width: 600px;
+  width: 60%;
   display: flex;
   flex-direction: column;
   background:${({ theme }) => theme.primary_light};
   border: 1px solid rgba(255, 255, 255, 0.125);
-  padding: 32px;
+  padding: 3vh;
   border-radius: 12px;
   box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
   margin-top: 28px;
@@ -133,10 +124,10 @@ const ContactInput = styled.input`
   background-color: #c6bfb190;
   border: 1px solid ${({ theme }) => theme.black_light};
   outline: none;
-  font-size: 18px;
+  font-size: 1em;
   color: ${({ theme }) => theme.black_light};
   border-radius: 12px;
-  padding: 12px 16px;
+  padding: 1vh;
   &:focus {
     border: 1px solid ${({ theme }) => theme.white};
   }
@@ -155,17 +146,17 @@ const ContactInputMessage = styled.textarea`
   }
 `;
 const ContactButton = styled.input`
-    text-decoration:none;
-    margin:7px;
-    background:${({ theme }) => theme.primary_light};
+    text-decoration: none;
+    margin: 7px;
+    background: #cfc1a4;
     color: white;
-    font-size: 3vh;
+    font-size: 1em;
     font-weight: 500;
-    padding: 2vh;
+    padding: 0.5vh;
     transition: 0.3s;
-    border-radius:4vh;
-    width: 90%;
-    cursor:pointer;
+    border-radius: 4vh;
+    width: 30%;
+    cursor: pointer;
     &:hover {
         background: ${({ theme }) => theme.gray_dark};
         border-radius:4vh;
@@ -174,7 +165,7 @@ const ContactButton = styled.input`
 `;
 
 export { FooterContainer, FooterWrapper, Nav, NavLink, 
-    SocialMediaIcons, SocialMediaIcon, Message,
+    SocialMediaIcon, Message,
     Container, Wrapper, Title,
     ContactForm,
     ContactTitle,
